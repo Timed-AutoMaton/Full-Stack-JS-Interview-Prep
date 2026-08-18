@@ -15,3 +15,6 @@ function greet() {
         console.log(globalVariable);
     }
 }
+
+
+//Scope determines where variables are defined and where they can be accessed

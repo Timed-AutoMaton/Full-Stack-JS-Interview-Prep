@@ -6,4 +6,4 @@ console.log(array2);
 console.log(array3);
 
 
-//Concat() method will create the new array and not modify the original array. 
+//Concat() method will create the new array and not modify the original array. It returns a new Array so you have save it in new variable

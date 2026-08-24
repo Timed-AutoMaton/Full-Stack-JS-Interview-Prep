@@ -9,11 +9,12 @@ let userDetails = {
     designation: "Software Engineer",
 }
 
-let printDetails = function (state) {
-    console.log(`${this.name} lives in ${state}`);
+let printDetails = function (state, country) {
+    console.log(`${this.name} lives in ${state} and he is from ${country}`);
 }
 
-printDetails.call(userDetails, "Bahawalpur");
+// printDetails.call(userDetails, "Bahawalpur", "Pakistan");
+
 
 let userDetails2 = {
     name: "Zubi",
@@ -22,4 +23,4 @@ let userDetails2 = {
 }
 
 //function borrowing
-printDetails.call(userDetails2, "Lahore");
+printDetails.apply(userDetails2, ["Lahore", "Pakistan"]);

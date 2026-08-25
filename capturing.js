@@ -3,9 +3,9 @@ var button = document.querySelector("button");
 
 div.addEventListener("click", () => {
     console.log("div");
-});
+}, true);
 
-button.addEventListener("click", (event) => {
-    event.stopPropagation();
+button.addEventListener("click", () => {
+
     console.log("button");
-});
+}, true);

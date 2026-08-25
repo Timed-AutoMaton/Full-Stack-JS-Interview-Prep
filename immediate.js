@@ -6,6 +6,10 @@ div.addEventListener("click", () => {
 });
 
 button.addEventListener("click", (event) => {
-    event.stopPropagation();
     console.log("button");
+});
+
+button.addEventListener("click", (event) => { 
+    console.log("button1");
+    event.stopImmediatePropagation();
 });

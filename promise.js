@@ -19,7 +19,7 @@ function createData(newData) {
         setTimeout(() => {
             datas.push(newData);
             let error = false;
-            if (error) {
+            if (!error) {
                 resolve();
             } else {
                 reject("Invalid");

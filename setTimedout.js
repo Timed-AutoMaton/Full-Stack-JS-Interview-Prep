@@ -10,7 +10,15 @@ function getDatas() {
             output += `<li>${data.name}</li>`;
         })
         document.body.innerHTML = output;
+    }, 2000);
+}
+
+function createData(newData) {
+    setTimeout(() => {
+        datas.push(newData);
     }, 1000);
 }
+
+createData({ name: "Vivek", Profession: "Software Engineer" });
 
 getDatas();

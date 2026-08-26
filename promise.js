@@ -19,7 +19,7 @@ function createData(newData) {
         setTimeout(() => {
             datas.push(newData);
             let error = false;
-            if (!error) {
+            if (error) {
                 resolve();
             } else {
                 reject("Invalid");
@@ -29,5 +29,5 @@ function createData(newData) {
 
 }
 
-createData({ name: "Vivek", Profession: "Software Engineer" }).then(getDatas);
+createData({ name: "Vivek", Profession: "Software Engineer" }).then(getDatas).catch(err => console.log(err));
 

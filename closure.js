@@ -1,10 +1,16 @@
 function createCounter() {
-    function increment() {
-        console.log("I'm increment function");
-    }
 
+    let count = 0;
+    function increment() {
+        count++;
+        return count;
+    }
     return increment;
 }
 
-const count = createCounter();
-console.log(count);
+
+const counter = createCounter();
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter());

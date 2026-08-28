@@ -11,4 +11,4 @@ const myThrottle = (fn, d) => {
 const newFun = myThrottle(() => {
     document.getElementById("myid").disabled = false;
     console.log("User Clicked!");
-}, 5000)
+}, 5000);

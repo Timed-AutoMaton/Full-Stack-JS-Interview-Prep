@@ -1,0 +1,19 @@
+let counter = 0;
+
+function getData() {
+    console.log("fetching Data" + counter++);
+}
+
+function myDebounce(cb, delay) {
+    let timer;
+    return function (...args) {
+        if (timer) {
+            clearTimeout(timer);
+            setTimeout(() => {
+                call();
+            }, d);
+        }
+    }
+}
+
+const BetterFunction = myDebounce(getData, 1000);

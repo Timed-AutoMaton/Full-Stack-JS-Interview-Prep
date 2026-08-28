@@ -21,3 +21,5 @@ garbage collector runs along with JS interpretor, the interpretor runs some code
 and for the same reason in the code above, the garbage collector won't remove the count variable since the count variable is being pointed
 by counter which is a reference to increment function, and when you run the counter function again it will remember the count variable's
 current state.*/
+
+/* So Closure is a function that remembers variables from its outer scope even after the outer function has finished executing */

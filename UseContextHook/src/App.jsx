@@ -1,18 +1,20 @@
-import { useState } from 'react'
+import { useState, createContext } from 'react'
 import Header from './components/Header'
 import Body from './components/Body'
 import Footer from './components/Footer'
 
-
+export const CounterContext = createContext();
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Header count={count} />
-      <Body count={count} setCount={setCount} />
-      <Footer count={count} />
+      <CounterContext value={{ count, setCount }}>
+        <Header />
+        <Body />
+        <Footer />
+      </CounterContext>
     </>
   )
 }

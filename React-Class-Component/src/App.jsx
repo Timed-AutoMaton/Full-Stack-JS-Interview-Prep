@@ -5,7 +5,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='bg-black min-h-screen'>
+    <div className='bg-black text-white'>
       <NewCounter />
     </div>
   )

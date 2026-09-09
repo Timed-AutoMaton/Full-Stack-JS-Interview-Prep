@@ -1,18 +1,20 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import './App.css'
-import withCardLook from './utils/withCardLook'
-import Alpha from "./components/Alpha";
-import Beta from './components/Beta';
+import useCounter from './customHooks/useCounter'
 
 
 function App() {
-  const WithCardLookAlpha = withCardLook(Alpha);
-  const WithCardLookBeta = withCardLook(Beta);
+
+  const [inputValue, setInputValue] = useState("");
+  const { count, increment, decrement, setByValue } = useCounter(0);
 
   return (
     <>
-      <WithCardLookAlpha />
-      <WithCardLookBeta />
+      <h1>{count}</h1>
+      <button>increment</button>
+      <button>decrement</button>
+      <input type="text" value={inputValue} placeholder='enter value' onChange={(e) => setByValue(e.target.value)} />
+      <button>Set Value</button>
     </>
   )
 }

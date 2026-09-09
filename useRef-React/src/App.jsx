@@ -11,11 +11,17 @@ function App() {
     refElement.current.focus();
   }
 
+  function handleInput() {
+    refElement.current.style.color = "blue";
+    refElement.current.value = "khal";
+  }
+
   return (
     <>
       <h1>Learning useRef</h1>
       <input ref={refElement} type="text" value={name} onChange={(e) => setName(e.target.value)} />
       <button onClick={reset}>Reset</button>
+      <button onClick={handleInput}>handle input</button>
     </>
   );
 }

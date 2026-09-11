@@ -15,4 +15,11 @@ const fs = require("fs");
 //     }
 // })
 
-fs.readFile()
+
+fs.readFile("./sample.txt", "utf-8", (err, result) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(result);
+    }
+});

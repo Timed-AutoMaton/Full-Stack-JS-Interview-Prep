@@ -16,6 +16,10 @@ const fs = require("fs");
 // })
 
 
+console.log(1);
+const result = fs.readFileSync("./sample.txt", "utf-8");
+console.log(result);
+console.log(2);
 fs.readFile("./sample.txt", "utf-8", (err, result) => {
     if (err) {
         console.log(err);
@@ -23,3 +27,5 @@ fs.readFile("./sample.txt", "utf-8", (err, result) => {
         console.log(result);
     }
 });
+console.log(3);
+

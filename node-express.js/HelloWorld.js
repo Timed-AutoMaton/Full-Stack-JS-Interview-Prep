@@ -1,3 +1,5 @@
-const add = require("./sum");
+const calculate = require("./sum");
+const { sum, subs } = calculate;
 console.log("Hello World!");
-console.log(add(3, 7));
+console.log(subs(3, 7));
+console.log(sum(3, 7));

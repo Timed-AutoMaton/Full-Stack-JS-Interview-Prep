@@ -1,12 +1,14 @@
-const os = require("os");
+const http = require("http");
 
-console.log(os.arch());
-console.log(os.totalmem());
-console.log(os.freemem());
-console.log(os.hostname());
-console.log(os.type());
-console.log(os.userInfo());
+const server = http.createServer((req, res) => {
+    const obj = {
+        name: "Zubi",
+        surname: "Khal"
+    }
+    res.writeHead(200, { "content-type": "application/json" });
+    res.end(JSON.stringify(obj));
+});
 
-
-
-
+server.listen(3000, () => {
+    console.log("Server Started");
+})

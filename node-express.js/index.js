@@ -11,6 +11,9 @@ const server = http.createServer((req, res) => {
     } else if (req.url === "/service") {
         res.writeHead(200, { "content-type": "text/html" });
         res.end("Service Page");
+    } else {
+        res.writeHead(200, { "content-type": "text/html" });
+        res.end("not found");
     }
 
 });

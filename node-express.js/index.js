@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { "content-type": "text/html" });
         res.end("Service Page");
     } else {
-        res.writeHead(200, { "content-type": "text/html" });
+        res.writeHead(404, { "content-type": "text/html" });
         res.end("not found");
     }
 

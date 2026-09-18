@@ -20,13 +20,20 @@ const app = express();
 //middleware
 app.use(express.json());
 
-app.post('/create-user', async (req, res) => {
+// create api
+app.post("/create-user", async (req, res) => {
     const userData = req.body;
     const createdUser = await userCollection.create(userData);
     res.send({
         "createdUser": createdUser
     })
 });
+
+// read all documents api
+app.get("/get-all-users", async (req, res) => {
+    const users = await userCollection.find();
+    res.send(users);
+})
 
 app.listen(8000, () => {
     console.log("server running on http://localhost:8000");

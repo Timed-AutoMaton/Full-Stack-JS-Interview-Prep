@@ -37,11 +37,25 @@ app.get("/get-all-users", async (req, res) => {
 
 //read single document
 app.get("/get-single-user", async (req, res) => {
-    console.log(req.body);
     const user = await userCollection.findOne({
         name: req.body.name
     });
     res.send(user);
+})
+
+app.put("/update-user", async (req, res) => {
+    console.log(req.query);
+    const updatedUSer = await userCollection.findByIdAndUpdate(req.query, req.body, {new:true});
+    res.send({
+        updatedUSer,
+    })
+})
+
+app.delete("/delete-user", async (req, res) => {
+    const deletedUser = await userCollection.findByIdAndDelete(req.query);
+    res.send({
+        deletedUser,
+    })
 })
 
 

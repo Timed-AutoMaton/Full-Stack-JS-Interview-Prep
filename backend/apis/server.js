@@ -35,6 +35,16 @@ app.get("/get-all-users", async (req, res) => {
     res.send(users);
 })
 
+//read single document
+app.get("/get-single-user", async (req, res) => {
+    console.log(req.body);
+    const user = await userCollection.findOne({
+        name: req.body.name
+    });
+    res.send(user);
+})
+
+
 app.listen(8000, () => {
     console.log("server running on http://localhost:8000");
 })

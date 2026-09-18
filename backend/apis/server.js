@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 
+//connect with mongodb cluster
 (async () => {
     const connectionInstance = await mongoose.connect("mongodb+srv://finalfantasyfantasy9_db_user:rzxIwO65lu7uW90d@cluster0.n7v7qk0.mongodb.net/");
     console.log(connectionInstance.connection.host);

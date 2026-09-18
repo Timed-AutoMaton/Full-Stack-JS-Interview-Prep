@@ -24,3 +24,4 @@ let favoriteColor: Color = Color.Blue;
 //Any 
 let randomValue: any = 10;
 randomValue = "Zubi";
+randomValue = true;

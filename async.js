@@ -29,8 +29,8 @@ function createData(newData) {
 
 }
 
-// Async & Await
-async function start() {
+// c & Await
+c function start() {
     await createData({ name: "Vivek", Profression: "Software Engineer" });
     getDatas();
 }

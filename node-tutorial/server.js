@@ -1,11 +1,9 @@
-function callback() {
-    console.log("Prince is calling a callback function");
-}
-
-const add = function (a, b, callback) {
+const add = function (a, b, zubi) {
     let result = a + b;
     console.log(`result:` + result);
-    callback();
+    zubi();
 }
 
-add(3, 4, callback);
+add(2, 3, function () {
+    console.log(`add completed`);
+});

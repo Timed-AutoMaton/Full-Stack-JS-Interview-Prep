@@ -12,10 +12,29 @@
 
     <button onclick="setCookies('dark')">set dark theme</button>
     <button onclick="setCookies('light')">set light theme</button>
+    <button onclick="displayCookies()">Display</button>
+    <button onclick="cookiesExpire()">Set Expiry</button>
+    <button onclick="clearCookies()">Clear Cookies</button>
 
     <script>
+        function clearCookies() {
+            document.cookie = "name=zubi;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+            document.cookie = "theme=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+            handleTheme();
+        }
+
+        function cookiesExpire() {
+            const date = new Date();
+            date.setDate(date.getDate() + 1);
+            document.cookie = `name=zubi;expires=${date.toUTCString()};path=/`;
+        }
+
+        function displayCookies() {
+            console.log(document.cookie);
+        }
+
         function setCookies(theme) {
-            document.cookie = "theme=" + theme;
+            document.cookie = "theme=" + theme + ";path=/";
             handleTheme();
         }
 

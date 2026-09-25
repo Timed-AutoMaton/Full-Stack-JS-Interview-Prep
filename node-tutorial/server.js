@@ -1,9 +1,13 @@
-const add = function (a, b, zubi) {
-    let result = a + b;
-    console.log(`result:` + result);
-    zubi();
-}
+const notes = require("./notes");
+let _ = require("loadash");
 
-add(2, 3, function () {
-    console.log(`add completed`);
-});
+console.log("server file is available");
+
+
+let age = notes.age;
+let result = notes.addNumber(age + 18, 10);
+console.log(age);
+console.log(`result is now ${result}`);
+
+
+console.log(_.isString("print"));

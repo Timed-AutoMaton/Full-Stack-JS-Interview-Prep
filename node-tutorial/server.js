@@ -1,13 +1,14 @@
-const notes = require("./notes");
-let _ = require("loadash");
+import express from 'express'
+import db from './db.js';
 
-console.log("server file is available");
+const app = express();
 
-
-let age = notes.age;
-let result = notes.addNumber(age + 18, 10);
-console.log(age);
-console.log(`result is now ${result}`);
+app.get('/', (req, res) => {
+    res.send('Hello World')
+})
 
 
-console.log(_.isString("print"));
+
+app.listen(3000, () => {
+    console.log('Server is running on http://localhost:3000')
+})

@@ -9,14 +9,33 @@ const userSchema = new mongoose.Schema({
     },
     age: {
         type: Number,
+        required: true
     },
-    email:{
+    email: {
+        type: String,
+    },
+    mobile: {
+        type: String,
+    },
+    address: {
         type: String,
         required: true
     },
-    mobile:{
+    idCardNumber: {
+        type: Number,
+        required: true,
+        unique: true
+    },
+    password: {
         type: String,
+        required: true
+    },
+    role: {
+        type: String,
+        enum: ["voter", "admin"],
+        default: "voter"
     }
+
 
 });
 
